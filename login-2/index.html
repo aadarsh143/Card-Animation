@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass login System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+  <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+  <div id="particles"></div>
+
+  <!-- LOGIN -->
+  <div class="wrapper active" id="login">
+    <h2>Login</h2>
+    <div class="input-field">
+      <input type="email" id="loginEmail" required>
+      <label>Email</label>
+    </div>
+    <div class="input-field">
+      <input type="password" id="loginPass" required>
+      <label>Password</label>
+    </div>
+    <div class="links">
+      <a onclick="showPage('forgot')">Forgot?</a>
+      <a onclick="showPage('signup')">Signup</a>
+    </div>
+    <button onclick="login()">Log In</button>
+  </div>
+
+  <div class="mouse-glow"></div>
+
+  <!-- SIGNUP -->
+  <div class="wrapper" id="signup">
+    <h2>Signup</h2>
+    <div class="input-field">
+      <input type="email" required>
+      <label>Email</label>
+    </div>
+    <div class="input-field">
+      <input type="password" required>
+      <label>Password</label>
+    </div>
+    <button onclick="showPage('login')">Register</button>
+    <br><br>
+    <a onclick="showPage('login')">Back to Login</a>
+  </div>
+
+  <!-- FORGOT -->
+  <div class="wrapper" id="forgot">
+    <h2>Reset Password</h2>
+    <div class="input-field">
+      <input type="email" required>
+      <label>Enter Email</label>
+    </div>
+    <button onclick="showPage('login')">Send Reset Link</button>
+    <br><br>
+    <a onclick="showPage('login')">Back</a>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="wrapper" id="dashboard">
+    <h2>Welcome Admin 🎉</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

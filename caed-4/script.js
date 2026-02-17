@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     spaceBetween: 20,
-    loop: true,   
+    loop: true,
+
+    speed: 800,   // animation speed
 
     autoplay: {
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false,
     },
 
