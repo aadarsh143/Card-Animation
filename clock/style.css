@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #f6f7fb;
+  --white-color: #fff;
+  --black-color: #18191a;
+  --red-color: #e74c3c;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+}
+
+body.dark {
+  --primary-color: #242526;
+  --white-color: #18191a;
+  --black-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.clock {
+  display: flex;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-color);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.clock label {
+  position: absolute;
+  inset: 15px;
+  text-align: center;
+  transform: rotate(calc(var(--i) * (360deg / 12)));
+}
+
+.clock label span {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black-color);
+  transform: rotate(calc(var(--i) * (-360deg / 12)));
+}
+
+.indicator {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: var(--black-color);
+  border: 3px solid var(--red-color);
+  z-index: 100;
+}
+
+.hand {
+  position: absolute;
+  bottom: 0;
+  transform-origin: bottom;
+  border-radius: 25px;
+}
+
+.hand.second {
+  height: 120px;
+  width: 3px;
+  background: var(--red-color);
+}
+
+.hand.minute {
+  height: 100px;
+  width: 5px;
+  background: var(--black-color);
+}
+
+.hand.hour {
+  height: 75px;
+  width: 8px;
+  background: var(--black-color);
+}
+
+.digital-time {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.date {
+  font-size: 16px;
+  color: var(--black-color);
+}
+
+.mode-switch {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: var(--white-color);
+  background: var(--black-color);
+  cursor: pointer;
+}
