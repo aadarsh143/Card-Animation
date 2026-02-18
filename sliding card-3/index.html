@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Card Slider</title>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.swiper{
+  width:100%;
+  padding:80px 0;
+}
+
+.swiper-slide{
+  width:300px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.image{
+  height:110px;
+  width:110px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid #ff6a00;
+}
+
+.image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.name{
+  font-size:18px;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.profession{
+  font-size:14px;
+  color:#777;
+  margin-top:5px;
+}
+
+.rating{
+  margin-top:10px;
+}
+
+.rating i{
+  color:#ff6a00;
+}
+
+.button{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:15px;
+}
+
+.button button{
+  padding:8px 20px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(90deg,#ff6a00,#ee0979);
+  color:#fff;
+  cursor:pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  color:#fff;
+}
+
+.swiper-pagination-bullet{
+  background:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+
+
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://img.freepik.com/premium-photo/successful-indian-asian-businessman-team-leader-standing-corporate-office_1098817-3799.jpg?semt=ais_user_personalization&w=740&q=80"></div>
+<div class="name">Aarav</div>
+<div class="profession">Web Developer</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/1562983249/photo/portrait-of-happy-and-successful-businessman-indian-man-smiling-and-looking-at-camera.jpg?s=612x612&w=0&k=20&c=tfBv6taG9nTidFwENcrvEEvRHABN5gDAmg-K1G1Etnc="></div>
+<div class="name">Vihaan</div>
+<div class="profession">UI Designer</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/1822210952/photo/businessman-with-computer-reading-documents-in-office-stock-photo.jpg?s=612x612&w=0&k=20&c=I1INyFKXHc5xgdxhwaQ6qmS3sY89qGmx0hBT7l0_w-o="></div>
+<div class="name">Arjun</div>
+<div class="profession">Frontend Dev</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/2029608798/photo/serious-and-focused-young-indian-man-working-in-office-with-tablet-standing-near-glass-board.jpg?s=612x612&w=0&k=20&c=xV7njhQw8-iOLahTjQX20-eIwe0ybQm6kau5jfnnVp8="></div>
+<div class="name">Kabir</div>
+<div class="profession">Backend Dev</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/1448167415/photo/smiling-indian-businessman-in-suit-and-glasses-with-laptop-near-office-building.jpg?s=612x612&w=0&k=20&c=vuUgcc-IlZewhnRm7yNOIuEfAvTnyJdMsPbnvkAnZjc="></div>
+<div class="name">Ishaan</div>
+<div class="profession">Full Stack Dev</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/1183769390/photo/i-dont-know-portrait-of-confused-young-girl-freelancer-with-black-dreadlocks-hairstyle-in.jpg?s=612x612&w=0&k=20&c=DWXruJGL6TLCCYKipWFnsWRgitpWjiqL5KOz2mq8cvs="></div>
+<div class="name">Ananya</div>
+<div class="profession">App Developer</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/1457348609/photo/female-doctor-talking-with-patient-asking-about-health-well-being.jpg?s=612x612&w=0&k=20&c=_V0VUBhDmbiPoe-ePVt4_oPs2vI0HT3d4a0KRmdfdro="></div>
+<div class="name">Aditi</div>
+<div class="profession">Software Engineer</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/2206332471/photo/indian-teenager-girl-using-a-laptop-learning-online-and-browsing-the-internet-at-home.jpg?s=612x612&w=0&k=20&c=yfDjM_Vkaeqvhmm21y9FswAXHnjGNZ0vwuh4kJP_OSA="></div>
+<div class="name">Kiaran</div>
+<div class="profession">React Developer</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/2161615822/photo/indian-young-adult-gen-z-professional-concentrated-busy-business-woman-lady-sitting-chair.jpg?s=612x612&w=0&k=20&c=1XDTr-iWcZj2Vu4QP73N4DQYNnHiuZRmdgCrYpjLiDM="></div>
+<div class="name">Pooja</div>
+<div class="profession">UX Designer</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+<div class="swiper-slide"><div class="card">
+<div class="image"><img src="https://media.istockphoto.com/id/801063538/photo/beautiful-businesswoman-brunette-portrait-in-the-office.jpg?s=612x612&w=0&k=20&c=zb4KkifpR0UZCbxV4ssmI8L_mIUy1w8ccWQrz27_0bo="></div>
+<div class="name">Riya</div>
+<div class="profession">Data Analyst</div>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+<i class="far fa-star"></i><i class="far fa-star"></i>
+</div>
+<div class="button"><button>About</button><button>Hire</button></div>
+</div></div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 60,
+  loop: true,
+
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 150,
+    modifier: 1,
+    slideShadows: false,
+  },
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+</script>
+
+</body>
+</html>
