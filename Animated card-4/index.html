@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adidas Pro Max</title>
+
+<link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body id="body">
+
+<!-- Floating Circles (Parallax Background) -->
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<!-- NAVBAR -->
+<header>
+    <h2>ADIDAS</h2>
+
+    <div class="cart">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-count">0</span>
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="left">
+        <h1>Future <span>Comfort</span></h1>
+        <p>Experience next level running performance.</p>
+        <button id="buy-btn">Add To Cart</button>
+    </div>
+
+    <div class="card">
+
+        <div class="slider-container">
+            <button class="nav-btn prev"><i class='bx bx-chevron-left'></i></button>
+
+            <img id="slider">
+
+            <button class="nav-btn next"><i class='bx bx-chevron-right'></i></button>
+        </div>
+
+        <div class="dots" id="dots"></div>
+
+        <h2>ADIDAS AMALGO</h2>
+        <div class="price">$<span id="price"></span></div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

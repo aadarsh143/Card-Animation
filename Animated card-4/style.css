@@ -1,0 +1,158 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#4cb8c4,#3b82f6);
+  transition:0.6s;
+  overflow:hidden;
+  color:white;
+}
+
+/* Parallax Circles */
+.circle{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+}
+
+.c1{
+  width:300px;
+  height:300px;
+  top:10%;
+  left:5%;
+}
+
+.c2{
+  width:200px;
+  height:200px;
+  bottom:10%;
+  right:10%;
+}
+
+/* NAV */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:25px 60px;
+  align-items:center;
+}
+
+.cart{
+  position:relative;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.cart span{
+  position:absolute;
+  top:-8px;
+  right:-10px;
+  background:red;
+  padding:3px 7px;
+  border-radius:50%;
+  font-size:12px;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  padding:40px;
+  flex-wrap:wrap;
+}
+
+.left{
+  max-width:400px;
+}
+
+.left h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.left span{
+  color:#ffd700;
+}
+
+.left button{
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Glass Card */
+.card{
+  width:380px;
+  padding:30px;
+  border-radius:25px;
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 25px 60px rgba(0,0,0,0.3);
+  text-align:center;
+  transition:0.4s;
+}
+
+/* 3D Floating Shoe */
+.slider-container img{
+  width:260px;
+  transition:0.4s;
+  animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+.nav-btn{
+  position:absolute;
+  background:rgba(255,255,255,0.3);
+  border:none;
+  font-size:25px;
+  cursor:pointer;
+  padding:5px 10px;
+  border-radius:50%;
+}
+
+.prev{ left:-20px; top:40%; }
+.next{ right:-20px; top:40%; }
+
+.price{
+  font-size:24px;
+  margin-top:10px;
+}
+
+.dots{
+  display:flex;
+  justify-content:center;
+  margin:15px 0;
+}
+
+.dots span{
+  width:12px;
+  height:12px;
+  margin:0 6px;
+  border-radius:50%;
+  background:white;
+  opacity:0.4;
+  cursor:pointer;
+}
+
+.dots span.active{
+  opacity:1;
+  transform:scale(1.2);
+}
+
+@media(max-width:900px){
+  .hero{flex-direction:column;}
+}
