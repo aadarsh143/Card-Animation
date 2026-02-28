@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RGB Keyboard Tester</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-panel">
+
+    <div class="screen" id="screen"></div>
+
+    <div class="stats">
+        <p>Words: <span id="words">0</span></p>
+        <p>Chars: <span id="chars">0</span></p>
+        <p>WPM: <span id="wpm">0</span></p>
+    </div>
+
+</div>
+
+
+<div class="keyboard-container">
+<div class="keyboard-wrapper">
+
+<!-- Row 1 -->
+<div class="row">
+<button class="key" data-key="escape">ESC</button>
+<button class="key" data-key="1">1</button>
+<button class="key" data-key="2">2</button>
+<button class="key" data-key="3">3</button>
+<button class="key" data-key="4">4</button>
+<button class="key" data-key="5">5</button>
+<button class="key" data-key="6">6</button>
+<button class="key" data-key="7">7</button>
+<button class="key" data-key="8">8</button>
+<button class="key" data-key="9">9</button>
+<button class="key" data-key="0">0</button>
+<button class="key" data-key="-">-</button>
+<button class="key" data-key="=">=</button>
+<button class="key backspace" data-key="backspace">BACK</button>
+</div>
+
+<!-- Row 2 -->
+<div class="row">
+<button class="key tab" data-key="tab">TAB</button>
+<button class="key" data-key="q">Q</button>
+<button class="key" data-key="w">W</button>
+<button class="key" data-key="e">E</button>
+<button class="key" data-key="r">R</button>
+<button class="key" data-key="t">T</button>
+<button class="key" data-key="y">Y</button>
+<button class="key" data-key="u">U</button>
+<button class="key" data-key="i">I</button>
+<button class="key" data-key="o">O</button>
+<button class="key" data-key="p">P</button>
+<button class="key" data-key="[">[</button>
+<button class="key" data-key="]">]</button>
+<button class="key" data-key="\\">\\</button>
+</div>
+
+<!-- Row 3 -->
+<div class="row">
+<button class="key caps" data-key="capslock">CAPS</button>
+<button class="key" data-key="a">A</button>
+<button class="key" data-key="s">S</button>
+<button class="key" data-key="d">D</button>
+<button class="key" data-key="f">F</button>
+<button class="key" data-key="g">G</button>
+<button class="key" data-key="h">H</button>
+<button class="key" data-key="j">J</button>
+<button class="key" data-key="k">K</button>
+<button class="key" data-key="l">L</button>
+<button class="key" data-key=";">;</button>
+<button class="key" data-key="'">'</button>
+<button class="key enter" data-key="enter">ENTER</button>
+</div>
+
+<!-- Row 4 -->
+<div class="row">
+<button class="key shift" data-key="shift">SHIFT</button>
+<button class="key" data-key="z">Z</button>
+<button class="key" data-key="x">X</button>
+<button class="key" data-key="c">C</button>
+<button class="key" data-key="v">V</button>
+<button class="key" data-key="b">B</button>
+<button class="key" data-key="n">N</button>
+<button class="key" data-key="m">M</button>
+<button class="key" data-key=",">,</button>
+<button class="key" data-key=".">.</button>
+<button class="key" data-key="/">/</button>
+<button class="key shift" data-key="shift">SHIFT</button>
+</div>
+
+<!-- Row 5 -->
+<div class="row">
+<button class="key ctrl" data-key="control">CTRL</button>
+<button class="key">WIN</button>
+<button class="key" data-key="alt">ALT</button>
+<button class="key space" data-key=" ">SPACE</button>
+<button class="key" data-key="alt">ALT</button>
+<button class="key">FN</button>
+<button class="key ctrl" data-key="control">CTRL</button>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

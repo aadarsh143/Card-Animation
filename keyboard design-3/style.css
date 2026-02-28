@@ -1,0 +1,95 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Orbitron, sans-serif;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:linear-gradient(135deg,#0b0f1a,#1a0033,#000);
+}
+
+.keyboard-container{
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 40px #00ffff30,0 0 80px #ff00ff20;
+}
+
+.row{
+  display:flex;
+  justify-content:center;
+  margin:8px 0;
+}
+
+.key{
+  min-width:45px;
+  height:45px;
+  margin:4px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:#0a0a12; /* key hamesha dark rahegi */
+  color:white;
+  font-size:14px;
+  cursor:pointer;
+  position:relative;
+  transition:.15s;
+  z-index:1;
+}
+
+/* Big keys */
+.backspace{min-width:100px;}
+.tab{min-width:80px;}
+.caps{min-width:90px;}
+.enter{min-width:110px;}
+.shift{min-width:120px;}
+.ctrl{min-width:70px;}
+.space{min-width:300px;}
+
+/* ===== UNDER RGB GLOW ===== */
+.key::after{
+  content:"";
+  position:absolute;
+  left:-6px;
+  right:-6px;
+  top:-6px;
+  bottom:-6px;
+  border-radius:12px;
+  background:linear-gradient(120deg,
+      red,orange,yellow,green,cyan,blue,purple,red);
+  background-size:400%;
+  filter:blur(14px);
+  opacity:0;
+  z-index:-1;
+  animation:rgb 8s linear infinite;
+  transition:.25s;
+}
+
+/* click karne par light ON */
+.key.active::after{
+  opacity:1;
+}
+
+/* key upar uthti */
+.key.active{
+  transform:translateY(-6px) scale(1.05);
+  box-shadow:
+    0 0 10px #fff,
+    0 0 25px #00ffff;
+}
+
+/* press moment */
+.key:active{
+  transform:translateY(2px);
+  box-shadow:0 0 10px #000 inset;
+}
+
+@keyframes rgb{
+  0%{background-position:0%}
+  100%{background-position:400%}
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0d0d15, #1a0a2e, #0a1f3d, #1b0f2a);
+  background-size: 400% 400%;
+  animation: bgAnim 15s ease infinite;
+}
+
+/* Background Animation */
+@keyframes bgAnim {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.keyboard-container {
+  width: 90%;
+  max-width: 900px;
+}
+
+.keyboard-wrapper {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px #00ffff40, 0 0 60px #ff00ff30;
+}
+
+.keys-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.keys-row input {
+  height: 55px;
+  min-width: 55px;
+  margin: 10px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 5px #00ffff40;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,255,255,0.3), 0 0 30px rgba(255,0,255,0.2);
+}
+
+/* Neon Hover Animation */
+.keys-row input:hover {
+  color: #00ffff;
+  border-color: #00ffff;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff, 0 0 80px #00ffff;
+  transform: translateY(-3px);
+  animation: pulse 1.2s infinite alternate;
+}
+
+.keys-row input:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 10px #00ffff inset, 0 0 20px #ff00ff inset;
+}
+
+/* Spacebar Styling */
+.keys-row input[value="SPACE"] {
+  width: 60%;
+  border-radius: 25px;
+  text-align: center;
+  border-color: #00ffff;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff; }
+  50% { box-shadow: 0 0 35px #00ffff, 0 0 70px #ff00ff; }
+  100% { box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff; }
+}
